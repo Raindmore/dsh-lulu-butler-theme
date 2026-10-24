@@ -5,7 +5,7 @@ import path from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'application/javascript; charset=utf-8', '.png': 'image/png', '.webp': 'image/webp', '.md': 'text/plain; charset=utf-8' };
-const port = Number(process.env.LULU_PREVIEW_PORT || 4178);
+const port = Number(process.env.LULU_PREVIEW_PORT || 4179);
 http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');

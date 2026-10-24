@@ -1,0 +1,8 @@
+Use case: identity-preserve
+Asset type: a single transparent 3D mascot head cutout for the sidebar logo and peeking footer of the approved "噜噜 · 暖橙书房" desktop theme.
+Input image 1: approved application mockup; use the exact character face in its upper-left logo and the peeking lower-left face as the style target.
+Input image 2: original character identity sheet; use the front-view character to lock its identity, ignore all labels and other views.
+Primary request: recreate only the head of this exact lovable yellow/orange character "噜噜", centered and facing directly forward. The face is a broad rounded golden-yellow head, with an enormous smooth warm-orange muzzle covering its lower half, NO nostril holes, two glossy black oval eyes, tiny rounded triangular ears, and the little orange bun on top of the crown. Preserve the short, wide rounded silhouette and toy proportions. A tiny gentle happy smile low on the orange muzzle.
+Style/material: premium soft 3D collectible toy, smooth softly flocked clay/plush texture, warm soft studio light matching the approved mockup, crisp clean silhouette, natural subtle shading.
+Composition: head only, no neck, no shoulders, no body, no clothes; all of the chin, ears and top orange bun visible. Nearly fills a square image with ample transparent padding on every edge. No circle, badge, background disk, floor, scenery, cast shadow beyond the head, lettering, graphics, watermark or additional characters.
+Background: genuinely transparent alpha background.

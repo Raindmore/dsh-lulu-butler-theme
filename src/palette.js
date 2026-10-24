@@ -1,14 +1,14 @@
 // Paired values go through the native ThemeRuntime; DSH keeps ownership of mode.
 const light = {
-  bg: '#FFFCF6', surface: '#FFFDF9', lifted: '#FFFFFF', well: '#F5EDDF',
-  sidebar: '#F5EEDF', border: '#E7DDCD', ink: '#483528', secondary: '#796653',
-  muted: '#7C6957', accent: '#AD4F1B', accentHover: '#913F17', accentSoft: '#FBE9CA',
-  onAccent: '#FFFFFF', bubble: '#F9ECCE', code: '#F4EDDF', codeHead: '#EDE2D1',
-  hover: '#EDE2CF', green: '#437150', red: '#BA3E3D', warning: '#94610A', shadow: 'rgba(91, 61, 25, .09)',
+  bg: '#FFFCF7', surface: '#FFFEFB', lifted: '#FFFFFF', well: '#F4EADB',
+  sidebar: '#F7F0E0', border: '#E9D9C7', ink: '#482E1D', secondary: '#7C5D45',
+  muted: '#7A6653', accent: '#B95720', accentHover: '#A3481A', accentSoft: '#FBE9C5',
+  onAccent: '#FFFFFF', bubble: '#F9E8CA', code: '#F5ECDD', codeHead: '#EEDDC9',
+  hover: '#F2E4CD', green: '#437150', red: '#BA3E3D', warning: '#94610A', shadow: 'rgba(150, 95, 35, .08)',
 };
 const dark = {
-  bg: '#211C18', surface: '#2C2520', lifted: '#352C25', well: '#3A3027',
-  sidebar: '#28211B', border: '#514234', ink: '#F6EAD8', secondary: '#C8B59D',
+  bg: '#231B16', surface: '#2D231C', lifted: '#382B22', well: '#3E2E22',
+  sidebar: '#2B2119', border: '#57412F', ink: '#FFF0DB', secondary: '#D4B99A',
   muted: '#B09A81', accent: '#F4BA69', accentHover: '#FFD29B', accentSoft: '#503720',
   onAccent: '#342312', bubble: '#443323', code: '#2A231D', codeHead: '#352B21',
   hover: '#403328', green: '#93C29A', red: '#FFA19A', warning: '#E3BC77', shadow: 'rgba(0, 0, 0, .20)',
@@ -68,5 +68,5 @@ export const SWATCHES = { light, dark };
 
 export function paletteCSS() {
   const rules = mode => Object.entries(TOKENS).map(([key, pair]) => `${key}:${pair[mode]};`).join('');
-  return `body[data-lulu-theme]{${rules('light')}}\nbody[data-lulu-theme][data-ds-dark-theme]{${rules('dark')}}`;
+  return `body[data-lws-theme]{${rules('light')}}\nbody[data-lws-theme][data-ds-dark-theme]{${rules('dark')}}`;
 }

@@ -1,66 +1,33 @@
-# 噜噜 · 小管家
+# 噜噜 · 暖橙书房 1.0
 
-DeepSeek Harness 暖色主题。三套可切换的噜噜装扮，配合奶油日间与可可夜间，为日常工作添一点陪伴。
+DeepSeek Harness 原生主题插件。按「暖橙书房」效果图制作：奶油色侧栏、暖橙操作、端茶的管家噜噜，以及从左下角倾斜探头的噜噜。
 
-![奶油日间与三套噜噜装扮](docs/preview-light.png)
+![暖橙书房主题预览](docs/preview.webp)
 
-## 远程安装
+## 安装
 
-在 DeepSeek Harness 官方桌面版中：
-
-1. 打开侧栏「插件」。
-2. 点击「添加插件」右侧的下拉箭头，选择「安装第三方插件」。
-3. 将下面这一行粘贴到「包名或地址」，点击安装：
+在 DSH 的「插件 → 添加插件右侧箭头 → 安装第三方插件」中，把以下整行填入「包名或地址」：
 
 ```text
-github:Raindmore/dsh-lulu-butler-theme#v1.0.0
+github:Raindmore/dsh-lulu-butler-theme#warm-study-v1
 ```
 
-4. 在「已安装插件」里启用 `dsh-lulu-butler-theme`。如界面尚未更新，重启一次 DSH。
-5. 打开左下角「更多 → 设置 → 通用设置」，找到「噜噜 · 小管家」进行换装。
+安装后启用 **dsh-lulu-warm-study-theme**。如果装过旧的 **dsh-lulu-butler-theme**，请先在插件列表停用旧主题，再启用本主题。
 
-仓库内已提交编译好的 `lib/client.js`，安装不需要手动构建。GitHub 安装需要电脑能够访问 GitHub。
+安装包已预编译，无需自己构建。同事也可以使用同一地址在自己的 DSH 中安装。仅填写插件名字不会从 npm 下载；本插件目前通过 GitHub 分发。
 
-### 使用下载直链安装
+离线安装、关闭和卸载见 [安装说明](docs/INSTALL.md)。
 
-也可以在「包名或地址」中填入这个预构建安装包的地址：
+## 使用
 
-```text
-https://raw.githubusercontent.com/Raindmore/dsh-lulu-butler-theme/main/dsh-lulu-butler-theme-1.0.0.tgz
-```
+在「更多 → 设置 → 通用设置」找到「噜噜 · 暖橙书房 1.0」。可分别开关欢迎页书房、侧栏噜噜、轻柔动效或整个主题。配色跟随 DSH 原生的浅色 / 深色 / 系统外观。
 
-若希望手动安装，可以从本仓库下载 ZIP 并解压，在 DSH 中填写解压后、包含 `package.json` 的文件夹绝对路径。
+- 日间为暖光书房；深色为可可夜色与暖灯。
+- 欢迎页的三个快捷入口会填入提示词，保留已有草稿，由你自行发送。
+- 素材嵌入插件，不依赖远程图片服务；主题设置保存在本机。
+- 主题保留 DSH 的原生会话、模型、工作区、权限和附件功能。
 
-## 三套装扮
-
-| 装扮 | 细节 |
-| --- | --- |
-| 小管家 | 深棕礼服、奶油马甲、橙色领结和一杯热茶 |
-| 小侦探 | 驼色斗篷、放大镜，和一点好奇心 |
-| 晚安噜噜 | 星星睡衣与星形抱枕，慢慢来，不着急 |
-
-角色延续用户提供形象的圆脑袋、大橙色嘴巴、头顶小橙团和短短四肢，以内置生图工具生成透明素材。完整提示词见 [生成记录](docs/IMAGE_PROMPTS.md)。
-
-## 配色与设置
-
-- **奶油日间**：暖白背景、奶油黄侧栏、焦糖色按钮与深棕文字。
-- **可可夜间**：可可底色、柔和琥珀色强调与暖白文字。
-- 外观跟随 DSH 自带的浅色 / 深色 / 系统设置。
-- 装扮和角色、动效开关保存在当前客户端，重启后保留。
-- 支持操作系统的“减少动态效果”设置。
-- 在通用设置中关闭主题，或在插件页停用插件，恢复原生外观。
-
-![可可夜间](docs/preview-dark.png)
-
-## 兼容与验证
-
-已在官方 `@deepseek-ai/dsh@0.2.1-rc.2` 的 Web GUI 中进行隔离安装，验证角色切换、浅深色切换、偏好保存、停用清理和重新启用。桌面版使用同一客户端插件接口；较早版本若缺少主题覆盖接口或品牌 Slot，需要另行适配。
-
-运行时使用 DSH 自带的 React，没有额外运行时依赖。三套图片已嵌入客户端 bundle，无外部图片请求。安装包与通过原生启停测试的 bundle 保持一致。
-
-主题通过 `ctx.theme.overrideTokens` 与原生品牌、欢迎页和设置 Slot 工作；保留 DSH 的工作区、会话、输入框、模型配置和工具行为。
-
-## 开发与预览
+## 开发与验证
 
 ```sh
 npm ci
@@ -69,20 +36,10 @@ npm test
 npm run preview
 ```
 
-访问 `http://127.0.0.1:4178`。也可直接用浏览器打开 `preview/index.html`。
+打开 `http://127.0.0.1:4179/preview/index.html`。预览是交互式外观演示，没有连接模型。
 
-预览页面右侧「装扮间」为本地演示控件；实际 DSH 中的装扮入口位于通用设置。预览里的对话只展示视觉样式，不连接模型。
+已在官方 `@deepseek-ai/dsh@0.2.1-rc.2` 的隔离 Web GUI 中验证原生主题接口、提示词填入、设置、深浅色和插件停用清理。尚未在各个操作系统的打包桌面程序中逐一验证；后续 DSH 插件接口变化可能需要适配。原生侧栏宽度和系统标题栏由 DSH 管理，因此细节会随窗口及平台变化。
 
-- `src/`：插件、配色、偏好状态与样式源码。
-- `lib/`：预构建的原生客户端插件。
-- `assets/`：三套透明 PNG 原图与 WebP 素材。
-- `preview/`：可交互的独立视觉预览。
-- `dsh-lulu-butler-theme-1.0.0.tgz`：预构建安装包。
+`lib/client.js` 是交付的原生插件；`src` 为可修改源码。`assets` 中的 WebP 是可重建的素材，原始 PNG 保留在本地源文件包。素材提示词见 `assets/*-prompt.txt`。图库由内置生图工具生成，角色基于用户提供的噜噜参考。
 
-## 接口参考
-
-- [官方主题接口](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/client/ui-theme)
-- [官方客户端插件格式](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/client/modules)
-- [官方插件管理](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/client/ui-plugin-manager)
-
-这是自定义社区主题。
+版本：`dsh-lulu-warm-study-theme@1.0.0`。旧版「小管家」在主分支及 `v1.0.0` 标签中保留。

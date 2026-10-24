@@ -1,7 +1,7 @@
 {
-  "name": "dsh-lulu-butler-theme",
+  "name": "dsh-lulu-warm-study-theme",
   "version": "1.0.0",
-  "description": "噜噜 · 小管家 — 奶油日间 / 可可夜间主题，含管家、侦探与晚安三套装扮。",
+  "description": "噜噜 · 暖橙书房 1.0 — 还原暖光书房效果图的 DeepSeek Harness 桌面主题。",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -27,7 +27,8 @@
     "assets/*.webp",
     "cordis.patch.yml",
     "README.md",
-    "docs"
+    "docs/INSTALL.md",
+    "docs/preview.webp"
   ],
   "scripts": {
     "build": "node scripts/build.mjs",
@@ -43,6 +44,7 @@
   ],
   "license": "UNLICENSED",
   "devDependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "esbuild": "^0.25.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",

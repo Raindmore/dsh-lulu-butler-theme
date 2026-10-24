@@ -1,0 +1,21 @@
+Use case: stylized-concept
+Asset type: production hero background artwork for the approved "噜噜 · 暖橙书房" desktop theme, ART ONLY, not a UI screenshot.
+
+Input images:
+1. The approved desktop mockup is the exact visual target for the illustration. Recreate only its warm study / wooden desk / butler character vignette on the RIGHT. Remove and do not reproduce every UI element, logo, line of text, icon, navigation, input, button or interface border.
+2. The isolated butler mascot PNG is the exact identity and material reference.
+
+Primary request:
+Create one wide roughly 1536 x 900 pixel production background illustration matching the mockup's right-side artwork. The left 42% of the image is completely empty flat warm ivory #FFFCF5 for editable interface text; this blank area transitions extremely softly into the scene on the right. The bottom edge also fades naturally to the same flat ivory with no hard rectangular boundary.
+
+Subject:
+The SAME adorable golden-yellow character from the references, huge smooth orange muzzle WITHOUT nostrils, shiny black oval eyes, two tiny round ears, little orange bun on the crown, very large head and short chubby body. It wears the espresso-brown butler tailcoat, cream waistcoat, white shirt and orange bow tie. It stands on the light wood desktop with tiny yellow feet visible, waves with its left-side hand and holds a small cream cup on a brass tea tray with the other hand. Preserve the pose, outfit, face and proportions seen in the approved mockup. Show the entire head and full body, no cropping.
+
+Scene and layout:
+At the far right, the same softly blurred honey-colored bookcase, plain books and cream desk lamp; warm daylight from a tall pale cream window/curtain behind, a quiet soft honey circular light patch behind the mascot. Two small plain warm cream/caramel notebooks stacked on the desk just to the mascot's left. A subtle round woven mat under its feet. Keep the cozy room composition and lighting directly faithful to the approved image. Main mascot centered at approximately 74% of image width, full figure occupying about 55% of image height. The vignette is comfortably contained in the right half, with the far-right bookcase visible. No new props or extra characters.
+
+Style:
+Premium smooth soft 3D collectible toy rendering and a warmly lit mini study environment, the exact approved creamy/wood/caramel art direction, beautifully rounded forms, slight soft material grain, shallow depth of field behind the character. Bright friendly daytime lighting. The foreground character and tea tray are sharp. The room is softly blurred and restrained.
+
+Constraints:
+Opaque background, not transparent. Truly empty #FFFCF5 on the left, extremely smooth fade into the artwork and at the bottom, no hard box edge. No letters, no words, no text-like marks, no UI, no illustration caption, no watermark, no frame, no full application mockup, no screenshot panel. Do not redesign the room or the character. Exactly one coherent illustration.
