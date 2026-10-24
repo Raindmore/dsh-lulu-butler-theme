@@ -1,5 +1,5 @@
 node_modules/
-.dsh-study-home/
+.dsh-*/
 .runtime/
 assets/*.png
 src/generated.js

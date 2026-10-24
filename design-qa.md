@@ -38,6 +38,7 @@ No actionable P0/P1/P2 remains in the compared states.
 - Actual plugin disable removes injected style, theme attributes and registrations; re-enable restores them with one style layer.
 - Local preview: suggestion → draft → explicit preview submission → local response state → return to welcome.
 - Latest preview and native browser console: no captured errors/warnings.
+- Fresh remote installation using `github:Raindmore/dsh-lulu-butler-theme#warm-study-v1` succeeded with the official DSH CLI. Installed client bundle is byte-for-byte identical to the tested bundle.
 - `npm test`: 3 passed, covering persisted settings, bad/unavailable storage and both palettes' contrast.
 - No model/network completion was tested: the isolated profile intentionally has no configured model. No claim of installation in the user's everyday desktop profile.
 
