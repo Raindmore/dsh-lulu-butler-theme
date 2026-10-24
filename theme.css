@@ -1,0 +1,50 @@
+/* Everything is scoped to our class or our own components. Host geometry stays native. */
+body[data-lulu-theme] {
+  background-color: var(--lulu-bg);
+  color: var(--lulu-ink);
+  --lulu-mascot-shadow: drop-shadow(0 16px 18px rgba(115, 70, 20, .12));
+}
+body[data-lulu-theme] ::selection { background: var(--lulu-accentSoft); color: var(--lulu-ink); }
+body[data-lulu-theme] :focus-visible { outline-color: var(--lulu-accent); }
+.lulu-brand-mark { display:block; object-fit:contain; object-position:center; flex-shrink:0; }
+.lulu-brand-name { display:inline-flex; align-items:baseline; gap:8px; color:var(--lulu-ink); white-space:nowrap; }
+.lulu-brand-name strong { font-size:19px; letter-spacing:2px; font-weight:750; }
+.lulu-brand-name small { color:var(--lulu-secondary); font-size:11px; font-weight:400; letter-spacing:1px; }
+.lulu-hero-mark { display:flex; flex-direction:column; align-items:center; text-align:center; color:var(--lulu-ink); max-width:min(600px, calc(100vw - 40px)); white-space:normal; }
+.lulu-hero-stage { display:grid; place-items:center; position:relative; width:222px; height:210px; margin:0 0 20px; isolation:isolate; }
+.lulu-hero-stage::before { content:""; position:absolute; z-index:-1; width:184px; height:184px; border-radius:50%; corner-shape:round; background:var(--lulu-accentSoft); opacity:.65; }
+.lulu-hero-stage::after { content:"✦"; position:absolute; top:38px; right:6px; color:var(--lulu-accent); font-size:21px; transform:rotate(12deg); }
+.lulu-hero-img { width:204px; height:228px; object-fit:contain; filter:var(--lulu-mascot-shadow); transform-origin:50% 100%; }
+.lulu-eyebrow { font-size:10px; line-height:18px; letter-spacing:2.8px; font-weight:600; color:var(--lulu-secondary); margin:0 0 10px; }
+.lulu-hero-title { display:block; font-size:28px; line-height:1.45; font-weight:600; letter-spacing:.5px; }
+.lulu-hero-subtitle { display:block; font-size:13px; line-height:22px; font-weight:400; color:var(--lulu-secondary); margin-top:8px; }
+/* The native brand-mark slot lives inside its headline hitbox. Only this occupied
+   headline is restyled; no hashed class names or DOM mutation are needed. */
+body[data-lulu-theme] div:has(> span .lulu-hero-mark) { flex-direction:column; gap:0; padding-bottom:22px; }
+body[data-lulu-theme] div:has(> span .lulu-hero-mark) > span:not(:has(.lulu-hero-mark)) { display:none; }
+body[data-lulu-motion="true"] .lulu-hero-img { animation:lulu-arrive .7s cubic-bezier(.18,.7,.25,1) both; }
+body[data-lulu-motion="true"] .lulu-hero-stage:hover .lulu-hero-img { animation:lulu-greet .65s ease-in-out both; }
+@keyframes lulu-arrive { from { opacity:0; transform:translateY(10px) scale(.96); } to { opacity:1; transform:translateY(0) scale(1); } }
+@keyframes lulu-greet { 0%,100% { transform:rotate(0); } 35% { transform:rotate(-4deg); } 70% { transform:rotate(3deg); } }
+.lulu-settings { font-family:inherit; color:var(--dsw-alias-label-primary, #483528); padding:18px 0; border-bottom:1px solid var(--dsw-alias-border-l2, #e7ddcd); }
+.lulu-settings-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:14px; }
+.lulu-settings-head strong { font-size:14px; font-weight:600; }
+.lulu-settings-head p { font-size:12px; color:var(--dsw-alias-label-secondary, #796653); margin:4px 0 0; }
+.lulu-switch { appearance:none; position:relative; width:36px; height:21px; border:0; border-radius:20px; background:var(--dsw-alias-border-l3, #c7b8a4); padding:0; cursor:pointer; flex-shrink:0; }
+.lulu-switch[aria-checked="true"] { background:var(--dsw-alias-brand-primary, #ad4f1b); }
+.lulu-switch::after { content:""; position:absolute; top:3px; left:3px; width:15px; height:15px; background:white; border-radius:50%; box-shadow:0 1px 3px #0002; transition:transform .18s ease; }
+.lulu-switch[aria-checked="true"]::after { transform:translateX(15px); }
+.lulu-outfits { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; }
+.lulu-outfit { appearance:none; min-width:0; display:flex; flex-direction:column; align-items:center; gap:7px; border:1px solid var(--dsw-alias-border-l2, #e7ddcd); border-radius:14px; background:var(--dsw-alias-bg-layer-1, #fffdf9); color:inherit; font:inherit; padding:10px 8px; cursor:pointer; }
+.lulu-outfit img { width:70px; height:80px; object-fit:contain; transition:transform .18s ease; }
+.lulu-outfit:hover img { transform:translateY(-3px); }
+.lulu-outfit[aria-pressed="true"] { border-color:var(--dsw-alias-brand-primary, #ad4f1b); background:var(--dsw-alias-button-primary-dimmed, #fbe9ca); box-shadow:inset 0 0 0 1px var(--dsw-alias-brand-primary, #ad4f1b); }
+.lulu-outfit span { font-size:12px; }
+.lulu-setting-options { display:flex; flex-wrap:wrap; gap:16px; margin-top:14px; font-size:12px; }
+.lulu-setting-options label { display:flex; align-items:center; gap:6px; cursor:pointer; }
+.lulu-setting-options input { accent-color:var(--dsw-alias-brand-primary, #ad4f1b); }
+.lulu-settings[data-disabled="true"] .lulu-outfits, .lulu-settings[data-disabled="true"] .lulu-setting-options { opacity:.45; }
+.lulu-footnote { color:var(--dsw-alias-label-secondary, #796653); font-size:11px; line-height:1.6; margin:12px 0 0; }
+@media(max-height:760px) { .lulu-hero-stage { width:174px; height:154px; margin-bottom:14px; } .lulu-hero-stage::before { width:142px; height:142px; } .lulu-hero-img { width:151px; height:170px; } .lulu-hero-title { font-size:24px; } }
+@media(max-width:600px) { .lulu-hero-title { font-size:22px; } .lulu-hero-subtitle { font-size:12px; } .lulu-hero-stage { width:174px; height:154px; margin-bottom:14px; } .lulu-hero-stage::before { width:142px; height:142px; } .lulu-hero-img { width:151px; height:170px; } }
+@media(prefers-reduced-motion:reduce) { .lulu-hero-img, .lulu-outfit img, .lulu-switch::after { animation:none !important; transition:none !important; } }

@@ -1,0 +1,51 @@
+{
+  "name": "dsh-lulu-butler-theme",
+  "version": "1.0.0",
+  "description": "噜噜 · 小管家 — 奶油日间 / 可可夜间主题，含管家、侦探与晚安三套装扮。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "files": [
+    "lib",
+    "assets/*.webp",
+    "cordis.patch.yml",
+    "README.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/theme.test.mjs",
+    "preview": "node scripts/serve.mjs",
+    "pack:theme": "npm run build && npm pack --pack-destination .."
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh-theme",
+    "deepseek-harness",
+    "lulu"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sharp": "^0.34.0"
+  }
+}
